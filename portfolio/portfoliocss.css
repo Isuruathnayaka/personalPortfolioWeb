@@ -372,7 +372,7 @@ body {
     /* Mobile Home Text Positioning */
     .home-title {
         font-size: 70px;
-        top: 40%;
+        top: 55%;
         left: 100px;
         text-align: center;
     }
@@ -386,22 +386,22 @@ body {
     
     .home-slogane {
         font-size: 16px;
-        top: 72%;
-        left: 140px;
+        top: 65%;
+        left: 70px;
         text-align: center;
     }
     
     .home-description {
         font-size: 14px;
-        top: 76%;
-        left: 140px;
+        top: 70%;
+        left: 90px;
         text-align: center;
         max-width: 300px;
     }
     
     .home-buttons {
-        top: 88%;
-        left: 50%;
+        top: 85%;
+        left: 40%;
         transform: translateX(-50%);
         flex-direction: column;
         align-items: center;
