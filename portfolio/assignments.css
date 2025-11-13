@@ -1,0 +1,135 @@
+/* ====================== ASSIGNMENTS SECTION ====================== */
+
+.assignments-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.assignment-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.assignment-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 165, 0, 0.3);
+}
+
+.assignment-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.assignment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.assignment-card:hover .assignment-image img {
+    transform: scale(1.1);
+}
+
+.assignment-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.assignment-card:hover .assignment-overlay {
+    opacity: 1;
+}
+
+.assignment-link {
+    color: white;
+    background: orange;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.assignment-link:hover {
+    background: #ff8c00;
+    transform: scale(1.1);
+}
+
+.assignment-content {
+    padding: 1.5rem;
+}
+
+.assignment-content h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.assignment-content p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.assignment-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.assignment-tech span {
+    background: rgba(255, 165, 0, 0.2);
+    color: orange;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .assignments-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .assignments-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .assignment-image {
+        height: 200px;
+    }
+}
