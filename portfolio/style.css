@@ -1,0 +1,89 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+header {
+  position: fixed;       /* keeps header visible */
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 17px 0;
+  background: rgb(0, 0, 0);     /* initial color */
+  transition: all 0.3s ease; /* smooth color change */
+  z-index: 1000;         /* keeps it above content */
+}
+header.scrolled {
+  padding: 10px 0;             /* smaller after scroll */
+  background: rgba(51, 51, 51, 0.6); /* semi-transparent blue */
+  backdrop-filter: blur(10px);  /* glass blur effect */
+}
+.home.home-text{
+  max-width: 500px;
+  text-align: center;
+}
+
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: orange;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #111;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: rgb(249, 169, 21);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
